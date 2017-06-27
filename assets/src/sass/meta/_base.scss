@@ -17,7 +17,6 @@ a {
   }
 }
 
-
 h3 {
   margin-bottom:10px;
   text-transform: uppercase;
@@ -47,6 +46,16 @@ h3 {
   }
   &.-italic, > .-italic {
     font-style:italic;
+  }
+}
+
+.box {
+  background:white;
+  border: 1px solid $bgColor;
+  padding: 1rem;
+
+  &.-margin {
+    margin-bottom: 1rem;
   }
 }
 
@@ -105,12 +114,6 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
-
-  .item {
-    background:white;
-    border: 1px solid $bgColor;
-    padding: 1rem;
-  }
 }
 
 

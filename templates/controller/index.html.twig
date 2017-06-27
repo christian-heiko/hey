@@ -5,7 +5,7 @@
 {% block content %}
     <div class="list">
         {% for folder in folders %}
-            <div class="item">
+            <div class="box item">
                 <h3>
                     <a href="{{ folder.url }}">
                         {{ folder.name }}
@@ -13,7 +13,7 @@
                 </h3>
                 <div class="text -small">
                     <p class="-italic">{{ folder.description }}</p>
-                    <a href="//{{ folder.domains|first }}">
+                    <a href="//{{ folder.domains|first }}" target="_blank">
                         <span class="icon">{% include 'icons/core/link-2.svg' %}</span>
                         {{ folder.domains|first }}
                     </a>

@@ -16,30 +16,20 @@ class Logs extends Base
 
     public function get()
     {
-        $this->_parser =  new Parser(Parser::TYPE_NGINX);
+
         $logs = $this->_parseErrorLog();
 
-        return $this->render('controller/logs.html.twig', ['logs' => $logs]);
+        return $this->render('controller/logs.html.twig', ['logs' => array_reverse($logs)]);
     }
 
-
-    protected function _loadErrorLog($fileName)
-    {
-        $f = fopen($fileName, 'r');
-        if (!$f) throw new Exception();
-        while ($line = fgets($f)) {
-            yield $line;
-        }
-        fclose($f);
-    }
 
 
     protected function _parseErrorLog(){
         $lines = [];
-        foreach($this->_loadErrorLog($this->_app['hey.servers']->config->errorLogPath) as $line) {
-            $lines[] = $this->_parser->parse($line);
-        }
-        return $lines;
+        $matches = [];
+        $content = file_get_contents($this->_app['hey.servers']->config->errorLogPath);
+        preg_match_all('/([0-9]{4}\/{1}[0-9]{2}\/{1}[0-9]{2}.*)/', $content, $matches);
+        return $matches[0];
     }
 
 }

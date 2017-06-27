@@ -1,0 +1,17 @@
+{
+  "name": "christian-heiko/hey",
+  "version": "1.0.0",
+  "description": "Server Interface Hello",
+  "main": "index.js",
+  "author": "Christian Heiko",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "normalize.css": "^7.0.0",
+    "feather-icons": "colebemis/feather"
+  },
+  "dependencies": {
+
+  }
+}

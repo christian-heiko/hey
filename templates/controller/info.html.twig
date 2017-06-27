@@ -1,9 +1,14 @@
 {% extends "layout.html.twig" %}
 
-{% block title %} nice sites! {% endblock %}
+{% block title %} nice setup! {% endblock %}
 
 {% block content %}
-   info!
+   <article class="info">
+      <section class="part -php">
+         <h2>Php Info</h2>
+         <div class="contents">{{ phpInfo|raw }}</div>
+      </section>
+   </article>
 
 
 {% endblock %}

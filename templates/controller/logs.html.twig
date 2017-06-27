@@ -1,3 +1,15 @@
-{% for log in logs %}
-    {{ dump(log) }}
-{% endfor %}
+{% extends "layout.html.twig" %}
+
+{% block title %} nice logs! {% endblock %}
+
+{% block content %}
+    <article class="logs">
+        {% for log in logs %}
+            <section class="box -margin line">
+                <p>
+                    {{ log|nl2br }}
+                </p>
+            </section>
+        {% endfor %}
+    </article>
+{% endblock %}

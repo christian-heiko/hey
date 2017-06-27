@@ -1,0 +1,49 @@
+.info {
+
+  > .part {
+
+    &.-php {
+      > h1 {
+        background: blue;
+        color: white;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        font-size: 22px;
+      }
+
+      hr {
+        display:none;
+      }
+      table {
+        background: white;
+        border: 1px solid $bgColor;
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 2rem;
+
+        .e {
+          width: 20%;
+        }
+
+        .h {
+          text-align: left;
+        }
+        tbody {
+          tr {
+            th, td {
+              border-bottom: 1px solid $greyColor;
+              padding: 4px;
+            }
+
+            &:last-child {
+              th, td {
+                border-bottom: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

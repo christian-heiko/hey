@@ -80,7 +80,7 @@ class ServerInfo
         $this->domains = [
             $this->relativePath . '.' . $this->config->devDomainName,
             'www.' . $this->relativePath . '.' . $this->config->devDomainName,
-            $this->relativePath . 'localhost'
+            $this->relativePath . '.localhost'
         ];
     }
 
@@ -102,7 +102,7 @@ class ServerInfo
     public function findPathInfo()
     {
         foreach($this->config->infoFiles as $infoFile) {
-            $fileName = $this->path. $infoFile;
+            $fileName = $this->path . '/' . $infoFile;
             if (file_exists($fileName)) {
                 $this->_parseInfoFile($fileName);
             }
