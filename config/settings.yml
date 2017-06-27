@@ -10,9 +10,12 @@ general:
   debug: true
 
 twig:
-  cachePath: 'appRoot:var/cache/'
+  cachePath: appRoot:var/cache/
+  styleSheets:
+    - https://fonts.googleapis.com/css?family=Eczar:400,600,700,800|Work+Sans:400,400i
+    - assets/css/screen.css
   templatePaths:
-    - 'libraryRoot:templates/'
+    - libraryRoot:templates/
 
 server:
   serversPath:
