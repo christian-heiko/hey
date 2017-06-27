@@ -29,22 +29,22 @@ class ConfigTranslatorService implements ServiceProviderInterface
         $app['twig.path'] = $this->_preparePaths($app['config']['twig']['templatePaths']);
         $app['twig.options'] = [
             'cache' => $this->_preparePath(
-                $app['config']['twig']['templatePaths']
+                $app['config']['twig']['cachePath']
             )
         ];
     }
 
     protected function _preparePaths($paths)
     {
-        return array_map($this->_preparePath, $paths);
+        return array_map([$this, '_preparePath'], $paths);
     }
 
 
     protected function _preparePath($path){
         foreach([
-            'libraryPath' => $this->_app->getLibraryPath(),
-            'publicPath' => $this->_app->getPublicPath(),
-            'appPath' => $this->_app->getAppPath()
+            'libraryRoot' => $this->_app->getLibraryRoot(),
+            'publicRoot' => $this->_app->getPublicRoot(),
+            'appRoot' => $this->_app->getAppRoot()
                 ] as $var => $value){
             $path = str_replace($var . ':', $value, $path);
         }
