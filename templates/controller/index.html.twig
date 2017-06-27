@@ -1,0 +1,26 @@
+{% extends "layout.html.twig" %}
+
+{% block title %} nice sites! {% endblock %}
+
+{% block content %}
+    <div class="list">
+        {% for folder in folders %}
+            <div class="item">
+                <h3>
+                    <a href="{{ folder.url }}">
+                        {{ folder.name }}
+                    </a>
+                </h3>
+                <div class="text -small">
+                    <p class="-italic">{{ folder.description }}</p>
+                    <a href="//{{ folder.domains|first }}">
+                        <span class="icon">{% include 'icons/core/link-2.svg' %}</span>
+                        {{ folder.domains|first }}
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{
+    "name": "christian-heiko/hey",
+    "description": "A small localhost-manager for nginx",
+    "keywords": ["localhost"],
+    "homepage": "http://christian-heiko.ch",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Heiko",
+            "email": "hello@christian-heiko.ch"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "require-dev": {
+
+    },
+    "replace": {
+    },
+    "autoload": {
+        "psr-4": { "Hey\\": "src/Hey" }
+    }
+}

@@ -1,0 +1,15 @@
+{% extends "layout.html.twig" %}
+
+{% block title %} nice databases! {% endblock %}
+
+{% block content %}
+    <div class="list">
+        {% for db in dbList %}
+            <div class="item">
+                <h3>{{ db.Database }}</h3>
+            </div>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}
