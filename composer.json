@@ -10,6 +10,12 @@
             "email": "hello@christian-heiko.ch"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/christian-heiko/hey"
+        }
+    ],
     "require": {
         "php": ">=7.0.0",
         "silex/silex": "~2.0",
