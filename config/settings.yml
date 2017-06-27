@@ -9,6 +9,11 @@ db:
 general:
   debug: true
 
+twig:
+  cachePath: 'appRoot:var/cache/'
+  templatePaths:
+    - 'libraryRoot:templates/'
+
 server:
   serversPath:
   configsPath:
